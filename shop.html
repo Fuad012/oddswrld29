@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop All — ODDWRLD</title>
+  <meta name="description" content="Shop ODDWRLD: graphic tees, tops, shirts and flare sets.">
+  <meta name="theme-color" content="#121212">
+  <link rel="icon" href="assets/img/logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="shop">
+<div id="site-top"></div>
+<main id="main" class="page">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> / Shop</nav>
+  <div class="page__head"><h1 id="shopTitle">Shop All</h1><p id="shopCount"></p></div>
+  <div class="toolbar">
+    <div class="filters" id="filters" role="group" aria-label="Filter by category"></div>
+    <div class="tools" id="search">
+      <input class="field" id="q" type="search" placeholder="Search" aria-label="Search products">
+      <select class="field" id="sort" aria-label="Sort by">
+        <option value="featured">Featured</option>
+        <option value="low">Price: low to high</option>
+        <option value="high">Price: high to low</option>
+      </select>
+    </div>
+  </div>
+  <div class="grid" id="grid"></div>
+  <div class="empty" id="empty" hidden><p>No pieces match that search.</p><button class="btn btn--solid" id="clear" type="button">Clear filters</button></div>
+</main>
+<div id="site-foot"></div>
+<noscript><p style="padding:24px;text-align:center">ODDWRLD needs JavaScript to show the shop.</p></noscript>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

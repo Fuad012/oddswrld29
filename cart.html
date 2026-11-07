@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Bag — ODDWRLD</title>
+  <meta name="description" content="Review your ODDWRLD bag and place your order.">
+  <meta name="theme-color" content="#121212">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="assets/img/logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="cart">
+<div id="site-top"></div>
+<main id="main" class="page">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> / Bag</nav>
+  <div class="page__head"><h1>Your bag <span id="cartCount"></span></h1></div>
+
+  <div class="empty" id="cartEmpty" hidden><p>Your bag is empty.</p><a class="btn btn--solid" href="shop.html">Start shopping</a></div>
+
+  <div class="cartgrid" id="cartGrid" hidden>
+    <ul id="lines"></ul>
+
+    <aside class="summary" id="summary" aria-label="Order summary">
+      <h2>Order summary</h2>
+      <div class="sum"><span>Subtotal</span><span id="subtotal"></span></div>
+      <div class="sum"><span>Delivery</span><span>Confirmed on WhatsApp</span></div>
+      <div class="sum total"><span>Total</span><span id="total"></span></div>
+      <p class="note" style="margin-top:12px">Your order goes to us as a ready-made message. We confirm stock, delivery and payment with you. No payment is taken on this site.</p>
+
+      <form id="orderForm" class="form" novalidate>
+        <label>Full name<input class="field" name="name" autocomplete="name" required></label>
+        <div class="two">
+          <label>Phone (WhatsApp)<input class="field" name="phone" type="tel" autocomplete="tel" required></label>
+          <label>Email (optional)<input class="field" name="email" type="email" autocomplete="email"></label>
+        </div>
+        <label>Delivery address<input class="field" name="address" autocomplete="street-address" required></label>
+        <label>City / State<input class="field" name="city" autocomplete="address-level2" required></label>
+        <label>Notes (optional)<textarea class="field" name="notes" placeholder="Landmarks, preferred delivery time…"></textarea></label>
+        <p class="err" id="formErr" role="alert"></p>
+        <button type="button" class="btn btn--solid btn--block" id="sendWa">Place order on WhatsApp</button>
+        <button type="button" class="btn btn--block" id="sendMail">Send order by email</button>
+        <p><button type="button" class="linkbtn" id="clearBag">Clear bag</button></p>
+      </form>
+      <div class="confirm" id="confirm" hidden></div>
+    </aside>
+  </div>
+</main>
+<div id="site-foot"></div>
+<noscript><p style="padding:24px;text-align:center">ODDWRLD needs JavaScript to show your bag.</p></noscript>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
